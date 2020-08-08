@@ -25,11 +25,9 @@ class Shape:
     def addFaces(self, triangles_list):
         self.faces += triangles_list
 
-
     def sortedFaces(self):
-        sorted_faces = sorted(self.faces, key=lambda face:  min(self.nodes_pcamera[i][2] for i in face))
+        sorted_faces = sorted(self.faces, key=lambda face: min(self.nodes_pcamera[i][2] for i in face))
         return sorted_faces
-
 
     def setColor(self, color):
         self.color = color
