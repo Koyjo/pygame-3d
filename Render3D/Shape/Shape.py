@@ -10,7 +10,7 @@ def computePCamera(node, camera):
     :param camera: np.array[4,4] camera transform matrix
     :return: node coordinates relative to camera
     """
-    return node.dot(np.linalg.inv(camera))
+    return node.dot(camera)
 
 
 def computePixelCoordinate(pCamera):

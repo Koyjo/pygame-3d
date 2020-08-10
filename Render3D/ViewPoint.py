@@ -3,15 +3,34 @@ import numpy as np
 from Render3D import TransformMatrix
 
 
-def rotate(x, y, z):
+def rotateAbs(axis, radians):
     """
-    Rotate the camera
-    @:param x: Rotation along the x axis (in radians)
-    @:param y: Rotation along the y axis (in radians)
-    @:param z: Rotation along the z axis (in radians)
+    Rotate the camera around an absolute axis
+    @:param axis: axis of the rotation
+    @:param radians: Rotation along the axis (in radians)
     """
 
-    Camera.matrix = np.dot(Camera.matrix, TransformMatrix.rotate(Camera.position, x, y, z))
+    Camera.rotation[axis] += radians
+    if axis == 'x':
+        Camera.matrix = Camera.matrix.dot(TransformMatrix.rotateX(radians))
+    elif axis == 'y':
+        Camera.matrix = Camera.matrix.dot(TransformMatrix.rotateY(radians))
+    elif axis == 'z':
+        Camera.matrix = Camera.matrix.dot(TransformMatrix.rotateZ(radians))
+
+
+def rotate(axis, radians):
+    """
+    Rotate the camera around an relativa axis
+    @:param axis: axis of the rotation
+    @:param radians: Rotation along the axis (in radians)
+    """
+    Camera.rotation[axis] += radians
+    Camera.matrix = Camera.original_matrix \
+        .dot(TransformMatrix.rotateX(Camera.rotation['x'])) \
+        .dot(TransformMatrix.rotateY(Camera.rotation['y'])) \
+        .dot(TransformMatrix.rotateZ(Camera.rotation['z'])) \
+        .dot(TransformMatrix.translate(Camera.position['x'], Camera.position['y'], Camera.position['z']))
 
 
 def move(x, y, z):
@@ -21,13 +40,22 @@ def move(x, y, z):
     @:param y: Translation along the y axis
     @:param z: Translation along the z axis
     """
-    Camera.position = Camera.position + np.array([x, y, z])
+
     Camera.matrix = np.dot(Camera.matrix, TransformMatrix.translate(x, y, z))
+    Camera.position['x'] += x
+    Camera.position['y'] += y
+    Camera.position['z'] += z
 
 
 class Camera:
-    position = np.array([0, 0, 0])
-    matrix = np.array([[1, 0, 0, 0],
-                       [0, 1, 0, 0],
-                       [0, 0, -1, -1],
-                       [0, 0, 0, 1]])
+    position = {'x': 0,
+                'y': 0,
+                'z': 0}
+    rotation = {'x': 0,
+                'y': 0,
+                'z': 0}
+    original_matrix = np.array([[1, 0, 0, 0],
+                                [0, 1, 0, 0],
+                                [0, 0, -1, 0],
+                                [0, 0, 0, 1]])
+    matrix = original_matrix

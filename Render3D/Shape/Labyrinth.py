@@ -2,15 +2,18 @@ import numpy as np
 from Render3D.Shape.Shape import Shape
 
 
-def generateNodes(xmin, ymin, zmin, xmax, ymax, zmax):
-    return [(x, y, z) for x in [xmin, xmax] for y in [ymin, ymax] for z in [zmin, zmax]]
+def generateWallsFromGraph(graph):
+    """
+    TODO
+    """
+    pass
 
 
-class Cuboid(Shape):
+class Labyrinth(Shape):
 
     def __init__(self, xmin, ymin, zmin, xmax, ymax, zmax):
         super().__init__()
-        nodes = generateNodes(xmin, ymin, zmin, xmax, ymax, zmax)
+        nodes = [(x, y, z) for x in [xmin, xmax] for y in [ymin, ymax] for z in [zmin, zmax]]
         cube_nodes = np.array(nodes)
         self.addNodes(cube_nodes)
         faces = [[0, 2, 6, 4],

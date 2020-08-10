@@ -15,10 +15,10 @@ def main():
     # cube = Cuboid(-100, -100, 200, 100, 100, 400)
     # renderer.addShape('cube', cube)
 
-    sphere = Sphere(0, 0, 1, 0.5, 20)
+    sphere = Sphere(0, 0, 0.5, 0.5, 20)
     renderer.addShape('sphere1', sphere)
 
-    plane = Plane((0, 0, 0), (0.5, 0.5, 0), (0, 0, 1), 0.2, 0.2, 20, 20)
+    plane = Plane((0, 0, 0), (0.5, 0.5, 0), (0, 0, 1), 0.4, 0.4, 20, 20)
     renderer.addShape('plane', plane)
 
     while True:

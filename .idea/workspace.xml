@@ -1,16 +1,14 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="c89381a0-46b2-4c04-903b-bca6c2fff104" name="Default Changelist" comment="Initial commit + Basic transformations">
-      <change afterPath="$PROJECT_DIR$/Render3D/Shape/Plane.py" afterDir="false" />
+    <list default="true" id="c89381a0-46b2-4c04-903b-bca6c2fff104" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/Render3D/Shape/Labyrinth.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Render3D/Model.py" beforeDir="false" afterPath="$PROJECT_DIR$/Render3D/Shape/Model.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Render3D/Renderer.py" beforeDir="false" afterPath="$PROJECT_DIR$/Render3D/Renderer.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Render3D/Shape/Cube.py" beforeDir="false" afterPath="$PROJECT_DIR$/Render3D/Shape/Cube.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Render3D/Shape/Shape.py" beforeDir="false" afterPath="$PROJECT_DIR$/Render3D/Shape/Shape.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Render3D/TransformMatrix.py" beforeDir="false" afterPath="$PROJECT_DIR$/Render3D/TransformMatrix.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Render3D/ViewPoint.py" beforeDir="false" afterPath="$PROJECT_DIR$/Render3D/ViewPoint.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/main.py" beforeDir="false" afterPath="$PROJECT_DIR$/main.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/requirements.txt" beforeDir="false" afterPath="$PROJECT_DIR$/requirements.txt" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -117,12 +115,20 @@
       <option name="project" value="LOCAL" />
       <updated>1596889353631</updated>
     </task>
-    <option name="localTasksCounter" value="3" />
+    <task id="LOCAL-00003" summary="Fixing camera rotation + comments">
+      <created>1596924913567</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1596924913567</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="Initial commit + Basic transformations" />
-    <option name="LAST_COMMIT_MESSAGE" value="Initial commit + Basic transformations" />
+    <MESSAGE value="Fixing camera rotation + comments" />
+    <option name="LAST_COMMIT_MESSAGE" value="Fixing camera rotation + comments" />
   </component>
   <component name="WindowStateProjectService">
     <state x="414" y="195" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1596889272217">
@@ -133,30 +139,30 @@
       <screen x="0" y="0" width="1920" height="1080" />
     </state>
     <state x="690" y="287" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog/0.0.1920.1080@0.0.1920.1080" timestamp="1596748577714" />
-    <state x="587" y="117" key="CommitChangelistDialog2" timestamp="1596909123245">
+    <state x="587" y="117" key="CommitChangelistDialog2" timestamp="1596924912644">
       <screen x="0" y="0" width="1920" height="1080" />
     </state>
-    <state x="587" y="117" key="CommitChangelistDialog2/0.0.1920.1080@0.0.1920.1080" timestamp="1596909123245" />
+    <state x="587" y="117" key="CommitChangelistDialog2/0.0.1920.1080@0.0.1920.1080" timestamp="1596924912644" />
     <state x="740" y="295" key="FileChooserDialogImpl" timestamp="1596726083044">
       <screen x="0" y="0" width="1920" height="1080" />
     </state>
     <state x="740" y="295" key="FileChooserDialogImpl/0.0.1920.1080@0.0.1920.1080" timestamp="1596726083044" />
-    <state width="1899" height="295" key="GridCell.Tab.0.bottom" timestamp="1596921114401">
+    <state width="1899" height="295" key="GridCell.Tab.0.bottom" timestamp="1597007665861">
       <screen x="0" y="0" width="1920" height="1080" />
     </state>
-    <state width="1899" height="295" key="GridCell.Tab.0.bottom/0.0.1920.1080@0.0.1920.1080" timestamp="1596921114401" />
-    <state width="1899" height="295" key="GridCell.Tab.0.center" timestamp="1596921114400">
+    <state width="1899" height="295" key="GridCell.Tab.0.bottom/0.0.1920.1080@0.0.1920.1080" timestamp="1597007665861" />
+    <state width="1899" height="295" key="GridCell.Tab.0.center" timestamp="1597007665860">
       <screen x="0" y="0" width="1920" height="1080" />
     </state>
-    <state width="1899" height="295" key="GridCell.Tab.0.center/0.0.1920.1080@0.0.1920.1080" timestamp="1596921114400" />
-    <state width="1899" height="295" key="GridCell.Tab.0.left" timestamp="1596921114400">
+    <state width="1899" height="295" key="GridCell.Tab.0.center/0.0.1920.1080@0.0.1920.1080" timestamp="1597007665860" />
+    <state width="1899" height="295" key="GridCell.Tab.0.left" timestamp="1597007665860">
       <screen x="0" y="0" width="1920" height="1080" />
     </state>
-    <state width="1899" height="295" key="GridCell.Tab.0.left/0.0.1920.1080@0.0.1920.1080" timestamp="1596921114400" />
-    <state width="1899" height="295" key="GridCell.Tab.0.right" timestamp="1596921114400">
+    <state width="1899" height="295" key="GridCell.Tab.0.left/0.0.1920.1080@0.0.1920.1080" timestamp="1597007665860" />
+    <state width="1899" height="295" key="GridCell.Tab.0.right" timestamp="1597007665861">
       <screen x="0" y="0" width="1920" height="1080" />
     </state>
-    <state width="1899" height="295" key="GridCell.Tab.0.right/0.0.1920.1080@0.0.1920.1080" timestamp="1596921114400" />
+    <state width="1899" height="295" key="GridCell.Tab.0.right/0.0.1920.1080@0.0.1920.1080" timestamp="1597007665861" />
     <state width="1899" height="363" key="GridCell.Tab.1.bottom" timestamp="1596882812064">
       <screen x="0" y="0" width="1920" height="1080" />
     </state>
@@ -177,10 +183,10 @@
       <screen x="0" y="0" width="1920" height="1080" />
     </state>
     <state x="461" y="185" key="SettingsEditor/0.0.1920.1080@0.0.1920.1080" timestamp="1596890012915" />
-    <state x="552" y="260" key="Vcs.Push.Dialog.v2" timestamp="1596889366709">
+    <state x="552" y="260" key="Vcs.Push.Dialog.v2" timestamp="1596924916323">
       <screen x="0" y="0" width="1920" height="1080" />
     </state>
-    <state x="552" y="260" key="Vcs.Push.Dialog.v2/0.0.1920.1080@0.0.1920.1080" timestamp="1596889366709" />
+    <state x="552" y="260" key="Vcs.Push.Dialog.v2/0.0.1920.1080@0.0.1920.1080" timestamp="1596924916323" />
     <state x="769" y="454" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2" timestamp="1596891026444">
       <screen x="0" y="0" width="1920" height="1080" />
     </state>
